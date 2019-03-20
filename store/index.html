@@ -1,0 +1,114 @@
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<div class="container"/>
+    <div class="exeHeader">
+    	<h3>Store</h3>
+		<p>Prices includes 25% VAT.</p>
+	</div>
+    	
+    	
+	<p class="exeTxt">Money: <span id="money" >10000</span> </p>
+	<p class="exeTxt">Message: <span id="message"></span></p>
+	
+	<select class="form-control" onchange="setProduct(this.value)">
+          <option value="0">Select</option>
+          <option value="1">Apple</option>
+          <option value="2">Banana</option>
+          <option value="3">Orange</option>
+          <option value="4">Grape</option>
+          <option value="5">Bicycle</option>
+          <option value="6">Samsung S5</option>
+          <option value="7">Toy train</option>
+          <option value="8">Cup of Coffee</option>
+          <option value="9">Chair</option>
+          <option value="10">TV</option>
+    </select>
+    <br>
+        <div id="buyForm" class="form-inline">
+            <label for="buyAmount">Amount:</label>
+	        <input id="buyAmount" type="text" class="form-control" >
+	        <button class="btn btn-primary" onclick="buyStuff()">Buy</button>
+	    </div>
+    <hr><br>
+	<h3>Price table</h3>
+	  <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price each</th>
+          </tr>
+        </thead>
+        <tbody id="productList">
+          <tr>
+            <td id="prod-name">Apple</td>
+            <td id="prod-price">15</td>
+          </tr>
+          <tr>
+            <td id="prod-name">Banana</td>
+            <td id="prod-price">23</td>
+          </tr>
+          <tr>
+            <td id="prod-name">Orange</td>
+            <td id="prod-price">34</td>
+          </tr>
+          <tr>
+            <td id="prod-name">Grape</td>
+            <td id="prod-price">4</td>
+          </tr>
+          <tr>
+            <td id="prod-name">Bicycle</td>
+            <td id="prod-price">999</td>
+          </tr>
+          <tr> 
+            <td id="prod-name">Samsung S5</td>
+            <td id="prod-price">4999</td>
+          </tr>
+          <tr>
+            <td id="prod-name">Toy train</td>
+            <td id="prod-price">399</td>
+          </tr>
+          <tr>
+            <td id="prod-name">Cup of Coffee</td>
+            <td id="prod-price">29</td>
+          </tr>
+          <tr>
+            <td id="prod-name">Chair</td>
+            <td id="prod-price">199</td>
+          </tr>
+          <tr>
+            <td id="prod-name">TV</td>
+            <td id="prod-price">9500</td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <hr><br>
+      <h3>Receipt</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Amount</th>
+            <th>Price</th>
+            <th>Sell?</th>
+          </tr>
+        </thead>
+        <tbody id="bought">
+       </tbody>
+       <tfoot>
+         <tr>
+          <th>VAT:</th>
+          <th id="totalVAT">0</th>
+          <th>Total:</th>
+          <th id="totalPrice">0</th>
+         </tr>
+        </tfoot>
+      </table>
+      
+</div>
+<br/>
+<script type="text/javascript" src="js/js9_awesome.js"></script>
