@@ -8,22 +8,22 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <title>Hello, world!</title>
+  <title>Insurance app</title>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Information</a>
+  <a class="navbar-brand" href="#">Insurance App</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#assignmentModal">Assignment information</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" data-toggle="modal" data-target="#priceModal">Pricing</a>
+      </li>
+      <li class="nav-item invisible">
+        <a class="nav-link" data-toggle="modal" data-target="#assignmentModal">Information</a>
       </li>
     </ul>
   </div>
@@ -31,7 +31,8 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-        <h1>Insurance form</h1>
+        <h2>Insurance form</h2>
+      <p>See Pricing tab for more information on how the pricing is calculated.</p>
       <form>
         <div class="form-row">
           <div class="form-group col-md-6">
@@ -65,11 +66,9 @@
           <label for="inputAdults">Percentage</label>
           <select id="inputCoverage" class="form-control">
             <option selected>100%</option>
-            <option>75%</option>
             <option>50%</option>
             <option>25%</option>
           </select>
-          <small>The price will change depending on the percentage on the insurance.</br>50% is half the price of 100%</small>
         </div>
 
         <button type="button" id="calcPriceBtn" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary">Calculate price</button>
@@ -172,6 +171,8 @@
               <li>500 SEK service charge</li>
               <li>100 SEK administration charge</li>
             </ul>
+            <h3>Coverage</h3>
+            <p>If you choose 100% coverage, the above prices are correct otherwise you get the percentage that you choose.</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -190,16 +191,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="js/test.js"></script>
-<script>
-  function deletePersonRow(currentElement){
-    console.log("current:"+currentElement);
-    console.log("current:"+currentElement.name);
-    console.log("current:"+currentElement.id);
-    console.log("current:"+currentElement.parent);
-    currentElement.delete();
-    currentElement.parent().parent().remove();
-    i--;
-  }
-</script>
 </body>
 </html>
