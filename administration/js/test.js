@@ -20,16 +20,17 @@ $(function() {
     } else {
       totalCost = (totalCost+1200)
     }
-    if (percent === 25)percent = 20;
-	
-    $('#monthly').text(((totalCost*(percent/100)+600)/12));
-    $('#yearly').text(totalCost*(percent/100)+600);
+    if (percent === 25) {
+      percent = 20
+    }
+    $('#monthly').text((totalCost*(percent/100)/12));
+    $('#yearly').text(totalCost*(percent/100));
   }
 
   function getTotalCost(){
     var a = getNum("inputAdults");
-	if(a>3)a++;
-	return (a * 10 * 12) + (getNum("inputKids") * 20 * 12);
+    if(a>3)a++;
+    return (a * 10 * 12) + (getNum("inputKids") * 20 * 12) + 500 + 100;
   }
 
   function getNum(elemId){

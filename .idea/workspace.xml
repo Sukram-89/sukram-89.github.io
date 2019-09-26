@@ -4,7 +4,6 @@
     <list default="true" id="2b3daac2-68b8-4c42-afbc-e8699f3b9bca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/insurance/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/insurance/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/insurance/js/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/insurance/js/test.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,11 +21,34 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/insurance/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="193" column="3" selection-start-line="193" selection-start-column="3" selection-end-line="193" selection-end-column="3" />
+            <state relative-caret-position="102">
+              <caret line="31" column="2" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="76" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/administration/js/vendor/jquery-3.4.1.min.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/administration/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="71" column="75" selection-start-line="71" selection-start-column="61" selection-end-line="71" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -52,6 +74,7 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/insurance/js/test.js" />
         <option value="$PROJECT_DIR$/insurance/index.html" />
+        <option value="$PROJECT_DIR$/administration/index.html" />
       </list>
     </option>
   </component>
@@ -77,23 +100,30 @@
             <path>
               <item name="sukram-89.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="sukram-89.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="administration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sukram-89.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sukram-89.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="administration" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sukram-89.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sukram-89.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="administration" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sukram-89.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sukram-89.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sukram-89.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="sukram-89.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="insurance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sukram-89.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sukram-89.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="insurance" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sukram-89.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sukram-89.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -105,12 +135,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/insurance" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\private\git\sukram-89.github.io" />
       <recent name="C:\private\git\sukram-89.github.io\insurance" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -129,6 +160,11 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/sukram-89.github.io/administration/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -140,23 +176,22 @@
       <option name="presentableId" value="Default" />
       <updated>1560460399147</updated>
       <workItem from="1560460400652" duration="6000" />
-      <workItem from="1560460533630" duration="3557000" />
+      <workItem from="1560460533630" duration="7038000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3563000" />
+    <option name="totallyTimeSpent" value="7044000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1551" height="879" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966975" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966975" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.28781793" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.28781793" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -218,13 +253,6 @@
     <entry file="file://$PROJECT_DIR$/bitbucket-pipelines.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -264,10 +292,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/administration/js/vendor/jquery-3.4.1.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/insurance/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="193" column="3" selection-start-line="193" selection-start-column="3" selection-end-line="193" selection-end-column="3" />
+        <state relative-caret-position="102">
+          <caret line="31" column="2" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="76" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administration/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="71" column="75" selection-start-line="71" selection-start-column="61" selection-end-line="71" selection-end-column="75" />
         </state>
       </provider>
     </entry>
