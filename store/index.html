@@ -15,7 +15,7 @@
 	<p class="exeTxt">Money: <span id="money" >10000</span> </p>
 	<p class="exeTxt">Message: <span id="message"></span></p>
 	
-	<select class="form-control" onchange="setProduct(this.value)">
+	<select id="select-product" class="form-control" onchange="setProduct(this.value)">
           <option value="0">Select</option>
           <option value="1">Apple</option>
           <option value="2">Banana</option>
@@ -32,7 +32,7 @@
         <div id="buyForm" class="form-inline">
             <label for="buyAmount">Amount:</label>
 	        <input id="buyAmount" type="text" class="form-control" >
-	        <button class="btn btn-primary" onclick="buyStuff()">Buy</button>
+	        <button id="button-buy-product" class="btn btn-primary" onclick="buyStuff()">Buy</button>
 	    </div>
     <hr><br>
 	<h3>Price table</h3>
