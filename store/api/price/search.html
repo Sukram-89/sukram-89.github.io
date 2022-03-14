@@ -5,7 +5,9 @@ name = new URL(location.href).searchParams.get('name')
 switch(name) {
 case "Apple":
 case "apple":
-  window.location.replace("https://hoff.app/store/api/price/1");
+  document.open();
+  document.write({"id":1, "price":15, "name":"Apple"});
+  document.close();
   break;
 case "Banana":
 case "banana":
