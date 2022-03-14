@@ -1,5 +1,5 @@
 {
-"id":1,
-"price":15,
-"name":"apple"
+  "id":1,
+  "price":15, 
+  "name":"Apple"
 }
