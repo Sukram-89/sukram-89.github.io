@@ -1,0 +1,41 @@
+<script>
+name = new URL(location.href).searchParams.get('name')
+if(name){
+  switch(name) {
+  case "Apple":
+  case "apple":
+    window.location.replace("http://hoff.app/store/api/price/1");
+    break;
+  case "Banana":
+  case "banana":
+    window.location.replace("http://hoff.app/store/api/price/2");
+    break;
+  case "Orange":
+    window.location.replace("http://hoff.app/store/api/price/3");
+    break;
+  case "Grape":
+    window.location.replace("http://hoff.app/store/api/price/4");
+    break;
+  case "Bicycle":
+    window.location.replace("http://hoff.app/store/api/price/5");
+    break;
+  case "Samsung S5":
+    window.location.replace("http://hoff.app/store/api/price/6");
+    break;
+  case "Toy Train":
+    window.location.replace("http://hoff.app/store/api/price/7");
+    break;
+  case "Cup of coffee":
+    window.location.replace("http://hoff.app/store/api/price/8");
+    break;
+  case "Chair":
+    window.location.replace("http://hoff.app/store/api/price/9");
+    break;
+  case "TV":
+    window.location.replace("http://hoff.app/store/api/price/10");
+    break;
+  default:
+    // code block
+}
+}
+</script>
