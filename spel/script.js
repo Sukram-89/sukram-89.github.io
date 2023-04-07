@@ -58,11 +58,11 @@ function checkAnswer(event) {
   }
 }
 function startTimer() {
-  let timeLeft = 30 * 100; // Multiply by 100 to get finer granularity
+  let timeLeft = 30;
 
   timer = setInterval(() => {
     timeLeft--;
-    timerProgress.style.width = `${(timeLeft / (30 * 100)) * 100}%`;
+    timerProgress.style.width = `${(timeLeft / 30) * 100}%`;
 
     if (timeLeft <= 0) {
       clearInterval(timer);
@@ -70,8 +70,9 @@ function startTimer() {
       answerInput.value = '';
       generateQuestion();
     }
-  }, 10); // Decrease the interval duration to 10 milliseconds
+  }, 1000);
 }
+
 startTimer();
 submitBtn.addEventListener('click', checkAnswer);
 generateQuestion();
