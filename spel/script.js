@@ -38,9 +38,17 @@ function checkAnswer(event) {
   if (userAnswer === currentAnswer) {
     clearInterval(timer);
     questionBox.textContent += ` = ${currentAnswer}`;
-    updateScore(5 - attempts);
+    updateScore(10 - attempts * 2); // Change the score calculation here
     answerInput.value = '';
-    setTimeout(generateQuestion, 2000);
+    if (score >= 50) {
+      alert('Grattis! Du vann spelet när du fick mer än 50 poäng!');
+      score = 0;
+      updateScore(0);
+    }
+
+    setTimeout(() => {
+      answerInput.focus(); // Keep the input field focused after submitting the answer
+      generateQuestion();
   } else {
     attempts++;
 
@@ -49,7 +57,7 @@ function checkAnswer(event) {
       answerInput.value = '';
       generateQuestion();
     } else {
-      updateScore(-1);
+      updateScore(-2); // Deduct 2 points for each incorrect answer
       submitBtn.style.backgroundColor = 'red';
       setTimeout(() => {
         submitBtn.style.backgroundColor = '#4CAF50';
@@ -72,6 +80,18 @@ function startTimer() {
     }
   }, 1000);
 }
+
+const rulesButton = document.getElementById('rules-button');
+const infoBox = document.getElementById('info-box');
+const closeInfoBox = document.getElementById('close-info-box');
+
+rulesButton.addEventListener('click', () => {
+  infoBox.style.display = 'flex';
+});
+
+closeInfoBox.addEventListener('click', () => {
+  infoBox.style.display = 'none';
+});
 
 startTimer();
 submitBtn.addEventListener('click', checkAnswer);
