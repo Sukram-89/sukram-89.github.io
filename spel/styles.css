@@ -41,10 +41,10 @@ h1 {
     height: 60px;
     background-color: #ff94d4; /* Change the button color to pink */
     color: #ffffff;
-    font-size: 1.8rem;
+    font-size: 2rem;
     line-height: 60px;
     text-align: center;
-    border-radius: 50%;
+    border-radius: 20px;
     cursor: pointer;
     transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
 }
