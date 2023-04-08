@@ -15,7 +15,7 @@ function getConfigFromUrl() {
 
   const value1 = parseInt(urlParams.get("value1"));
   const value2 = parseInt(urlParams.get("value2"));
-  const operations = urlParams.get("operation");
+  const operations = urlParams.get("operations");
   const time = parseInt(urlParams.get("time"));
 
   return { value1, value2, operations, time };
@@ -46,17 +46,37 @@ function getOperatorFromText(operation) {
 }
 
 function generateEquation() {
-  let value1 = Math.floor(Math.random() * (config.value1 + 1));
-  let value2 = Math.floor(Math.random() * (config.value2 + 1));
-  let operator = getOperatorFromText(config.operations);
+  const num1 = Math.floor(Math.random() * (config.value1 - 1 + 1)) + 1;
+  const num2 = Math.floor(Math.random() * (config.value2 - 1 + 1)) + 1;
 
-  let equationString = `${value1} ${operator} ${value2}`;
-  console.log(equationString)
-  let correctAnswer = eval(equationString);
+  let leftNum, rightNum, correctAnswer;
 
-  return { equationString, correctAnswer };
+  if (num1 > num2) {
+    leftNum = num1;
+    rightNum = num2;
+  } else {
+    leftNum = num2;
+    rightNum = num1;
+  }
+
+  switch (config.operations) {
+    case "add":
+      correctAnswer = leftNum + rightNum;
+      return { equationString: `${leftNum} + ${rightNum}`, correctAnswer };
+    case "subtract":
+      correctAnswer = leftNum - rightNum;
+      return { equationString: `${leftNum} - ${rightNum}`, correctAnswer };
+    case "multiply":
+      correctAnswer = leftNum * rightNum;
+      return { equationString: `${leftNum} * ${rightNum}`, correctAnswer };
+    case "divide":
+      if (leftNum % rightNum !== 0) {
+        leftNum = leftNum * rightNum;
+      }
+      correctAnswer = leftNum / rightNum;
+      return { equationString: `${leftNum} / ${rightNum}`, correctAnswer };
+  }
 }
-
 function startTimer() {
   startTime = new Date().getTime();
   timer = setInterval(() => {
@@ -95,7 +115,6 @@ function finishGame() {
   finalScoreElement.textContent = Math.round(score);
   hideElements();
   finishedContainer.classList.add("animate__animated", "animate__zoomIn");
-
   playAgainButton.addEventListener("click", () => {
     showElements();
     finishedContainer.style.display = "none";
@@ -155,6 +174,7 @@ function handleSubmit(e) {
     updateScore(-10);
   }
 }
+
 
 function handleTimerEnd() {
   generateAndDisplayNewEquation();
