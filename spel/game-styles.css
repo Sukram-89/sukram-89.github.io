@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #2196F3;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.exit-btn {
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    width: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.timer {
+    width: 100%;
+    height: 1rem;
+    background-color: #d0d7dc;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.timer-bar {
+    height: 100%;
+    background-color: #2196F3;
+    width: 100%;
+}
+
+.score {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.equation {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+input {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #1e88e5;
+}

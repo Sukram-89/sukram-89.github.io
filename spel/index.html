@@ -4,45 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Matematikspel</title>
+    <title>Välkommen till Matematikspelet!</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="game-container">
+    <header>
+        <h1>Välkommen till Matematikspelet!</h1>
+    </header>
+    <main>
+        <div class="config-box">
+          <section>
+              <p>I det här spelet får du lösa matematiska problem med olika svårighetsgrader. Välj dina inställningar nedan och börja spela!</p>
+          </section>
+            <form action="game.html" method="GET">
+                <label for="value1">Välj första värdet (0-100):</label>
+                <input type="number" id="value1" name="value1" min="0" max="100" inputmode="numeric" required>
 
+                <label for="value2">Välj andra värdet (0-100):</label>
+                <input type="number" id="value2" name="value2" min="0" max="100" inputmode="numeric" required>
 
-          <button id="rules-button" class="rules-button">Regler</button>
+                <label for="operation">Välj matematisk operation:</label>
+                <select id="operation" name="operation" required>
+                    <option value="add">+</option>
+                    <option value="subtract">-</option>
+                    <option value="multiply">×</option>
+                    <option value="divide">÷</option>
+                </select>
 
-          <!-- Add the info box -->
-          <div id="info-box" class="info-box">
-            <div class="info-box-content">
-              <h2>Välkommen till Charles Matte Spel!</h2>
-              <p>Regler:</p>
-              <ul>
-                <li>Svara på matematikfrågorna så snabbt som möjligt.</li>
-                <li>Du får 10 poäng för varje rätt svar, men förlorar 2 poäng för varje felaktigt svar.</li>
-                <li>Om du svarar felaktigt 5 gånger visas rätt svar och en ny fråga genereras.</li>
-                <li>Du har 30 sekunder på dig att svara på varje fråga.</li>
-                <li>Vinn spelet genom att nå 50 poäng!</li>
-              </ul>
-              <button id="close-info-box" class="close-info-box">Stäng</button>
-            </div>
-          </div>
+                <label for="time">Välj tid per fråga (sekunder):</label>
+                <input type="number" id="time" name="time" min="1" max="60" inputmode="numeric" required>
 
-
-        <div class="score-box">
-            <h3>Poäng: <span id="score">0</span></h3>
+                <button type="submit">Starta spelet</button>
+            </form>
         </div>
-        <div class="timer-bar">
-          <div class="timer-progress" id="timer-progress"></div>
-        </div>
-        <div class="question-box">
-            <h2>5 + 5</h2>
-        </div>
-        <div class="answer-box">
-            <input type="text" id="answer" class="answer-input" pattern="[0-9]*" inputmode="numeric" />
-        </div>
-        <button id="submit-btn">Skicka in svar</button>
-    </div>
-    <script src="script.js"></script>
+    </main>
 </body>
 </html>

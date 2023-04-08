@@ -1,111 +1,60 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
+    flex-direction: column;
 }
 
-.game-container {
+header {
+    background-color: #2196F3;
+    color: white;
     text-align: center;
-    background-color: #fff;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.config-box {
+    background-color: white;
     padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.question-box {
-    margin-bottom: 1rem;
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-.answer-box {
-    margin-bottom: 1rem;
+label {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
 }
 
-input {
+input, select {
+    font-size: 1.1rem;
     padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    width: 100%;
-    max-width: 200px;
+    margin-bottom: 1rem;
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #2196F3;
     color: white;
-    padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: 5px;
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 button:hover {
-    background-color: #45a049;
-}
-/* Add this to your existing styles.css file */
-.score-box {
-    margin-bottom: 1rem;
-}
-
-.timer-bar {
-  width: 100%;
-  height: 10px;
-  background-color: #f3f3f3;
-  position: relative;
-}
-
-.timer-progress {
-  height: 100%;
-  background-color: #4CAF50;
-  position: absolute;
-  width: 100%;
-  transition: width 0.5s linear;
-}
-
-
-/* Add this to your existing styles.css file */
-
-.rules-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 10px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.info-box {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.info-box-content {
-  background-color: white;
-  padding: 30px;
-  border-radius: 5px;
-  text-align: center;
-  max-width: 90%;
-}
-
-.close-info-box {
-  margin-top: 20px;
-  padding: 10px;
-  font-size: 16px;
-  cursor: pointer;
+    background-color: #1e88e5;
 }

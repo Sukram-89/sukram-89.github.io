@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game-styles.css">
+    <title>Matematikspelet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+<body>
+    <header>
+        <h1>Matematikspelet</h1>
+        <button class="exit-btn">Avsluta</button>
+    </header>
+    <main>
+        <div class="finished-container" style="display: none;">
+          <h2 class="finished-text">Grattis, du har avslutat spelet!</h2>
+          <p>Din poäng: <span id="final-score">0</span></p>
+          <button id="play-again-btn">Spela igen</button>
+        </div>
+        <div class="score">
+          <p>Din poäng: <span id="current-score">0</span></p>
+        </div>
+        <div class="timer">
+            <div class="timer-bar"></div>
+        </div>
+        <div class="equation">
+            <!-- The equation will be inserted here via JavaScript -->
+        </div>
+        <form>
+            <input type="number" id="answer" inputmode="numeric" placeholder="Skriv ditt svar här" required>
+            <button type="submit">Skicka svar</button>
+        </form>
+    </main>
+
+    <script src="game-script.js" defer></script>
+</body>
+</html>
