@@ -3,44 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematikspel för barn</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Välkommen till Matematikspelet!</title>
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Välkommen till Matematikspelet!</h1>
-    </header>
-    <main>
-        <div class="config-box">
-          <section>
-              <p>I det här spelet får du lösa matematiska problem med olika svårighetsgrader. Välj dina inställningar nedan och börja spela!</p>
-          </section>
-            <form action="game.html" method="GET">
-
-                <label for="value1">Högsta siffran:</label>
-                <select id="value1" name="value1">
-                  <!-- Option elements will be added here -->
-                </select>
-
-                <label for="value2">Högsta siffran:</label>
-                <select id="value2" name="value2">
-                  <!-- Option elements will be added here -->
-                </select>
-                <label for="operation">Välj matematisk operation:</label>
-                <select id="operation" name="operation" required>
-                    <option value="add">+</option>
-                    <option value="subtract">-</option>
-                    <option value="multiply">×</option>
-                    <option value="divide">÷</option>
-                </select>
-                <div id="timer-option">
-                  <label for="time">Välj tid per fråga (sekunder):</label>
-                  <input type="number" id="time" name="time" min="5" max="60" value="30" inputmode="numeric" required/>
-                </div>
-                <button type="submit">Starta spelet</button>
-            </form>
+    <div class="container">
+        <h1>Matematikspel för barn</h1>
+        <div class="difficulty">
+            <p>Välj svårighetsgrad:</p>
+            <div class="level-container">
+                <!-- Add difficulty levels -->
+                <div class="level" id="level-1">1</div>
+                <div class="level" id="level-2">2</div>
+                <div class="level" id="level-3">3</div>
+                <div class="level" id="level-4">4</div>
+                <div class="level" id="level-5">5</div>
+            </div>
         </div>
-    </main>
+        <button id="startGame">Börja spelet</button>
+    </div>
+    <script src="start-page.js"></script>
 </body>
 </html>

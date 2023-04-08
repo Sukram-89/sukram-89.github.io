@@ -1,60 +1,94 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f4f8;
-    height: 100vh;
+    font-family: "Arial", sans-serif;
+    background-color: #e6b0ff; /* Change the background color to purple */
     display: flex;
-    flex-direction: column;
-}
-
-header {
-    background-color: #2196F3;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-.config-box {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 90%;
 }
 
-form {
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.difficulty p {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.level-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
-label {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+.level {
+    width: 60px;
+    height: 60px;
+    background-color: #ff94d4; /* Change the button color to pink */
+    color: #ffffff;
+    font-size: 1.8rem;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-input, select {
-    font-size: 1.1rem;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
+.level:hover {
+    background-color: #ff94d4aa;
+    transform: scale(1.2);
+}
+
+.level.selected {
+    background-color: #4caf50;
+    border: 2px solid #ffffff;
+    transform: scale(1.2);
 }
 
 button {
-    background-color: #2196F3;
-    color: white;
+    font-size: 1.5rem;
+    background-color: #ff94d4; /* Change the button color to pink */
+    color: #ffffff;
     border: none;
-    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    padding: 15px 30px;
     cursor: pointer;
-    font-size: 1.1rem;
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: #1e88e5;
+    background-color: #ff94d4aa;
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+button.spin {
+    animation: spinAndShrink 1.5s ease-out;
+}
+
+@keyframes spinAndShrink {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    100% {
+        transform: scale(0) rotate(720deg);
+    }
 }

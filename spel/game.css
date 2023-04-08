@@ -1,0 +1,157 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7a8c6;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.top-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#stars-container {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding: 20px 0px;
+}
+
+.star {
+  margin-right: 0.25rem;
+}
+
+.equation {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.circle-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0.5rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.circle:hover {
+  background-color: #8c42af;
+  transform: scale(1.1);
+}
+
+.circle.selected {
+  background-color: #f139b4;
+}
+
+#submit-answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  background-color: #bb54d4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: all 0.3s;
+  padding: 2rem 3rem; /* add more padding to increase button size */
+}
+
+#submit-answer:hover {
+  background-color: #8c42af;
+  transform: scale(1.1);
+}
+
+.hidden {
+  display: none;
+}
+
+#winning-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#replay-game,
+#back {
+  font-size: 2rem;
+  background-color: #bb54d4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 1rem;
+  transition: all 0.3s;
+}
+
+#replay-game:hover,
+#back:hover {
+  background-color: #8c42af;
+  transform: scale(1.1);
+}
+
+.submit-answer-button {
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin: 20px 0;
+}
+.submit-answer-button:hover {
+  background-color: #66bb6a;
+}
+
+.x-mark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.circle.selected .x-mark {
+  opacity: 1;
+}

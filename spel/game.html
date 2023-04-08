@@ -1,39 +1,27 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="game-styles.css">
-    <title>Matematikspelet</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="game.css">
+  <title>Math Game</title>
 </head>
 <body>
-    <header>
-        <h1>Matematikspelet</h1>
-        <button class="exit-btn">Avsluta</button>
-    </header>
-    <main>
-      <div class="finished-container animate__animated animate__zoomIn" style="display: none;">
-        <h2>Grattis! Du har slutfört spelet!</h2>
-        <div>Din poäng: <span id="final-score">0</span></div>
-        <button id="play-again-btn" class="btn">Spela igen</button>
-        </div>
-        <div class="score">
-          <p>Din poäng: <span id="current-score">0</span></p>
-        </div>
-        <div class="timer">
-            <div class="timer-bar"></div>
-        </div>
-        <div class="equation">
-            <!-- The equation will be inserted here via JavaScript -->
-        </div>
-        <form>
-            <input type="number" id="answer" inputmode="numeric" placeholder="Skriv ditt svar här" required>
-            <button type="submit">Skicka svar</button>
-        </form>
-    </main>
-
-    <script src="game-script.js" defer></script>
+  <div class="game-container">
+    <div class="top-buttons">
+      <button id="back">&#x2190;</button>
+      <button id="replay-game">&#x21bb;</button>
+    </div>
+    <div id="stars-container"></div>
+    <div class="equation" id="equation"></div>
+    <div id="circle-container" class="circle-container"></div>
+    <button id="submit-answer" class="submit-answer-button">✓</button>
+  </div>
+  <div id="winning-screen" class="hidden">
+    <canvas id="confetti"></canvas>
+  </div>
+  <script src="confetti.js"></script>
+  <script src="gameLogic.js"></script>
+  <script src="gameEvents.js"></script>
 </body>
 </html>
