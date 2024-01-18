@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Allocation and LOE Calculator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        function calculateValues() {
+            var devsInTeam = parseInt(document.getElementById('devsInTeam').value) || 0;
+            var devsCanWork = parseInt(document.getElementById('devsCanWork').value) || 0;
+            var devsWillWork = parseInt(document.getElementById('devsWillWork').value) || 0;
+            var estimatedWeeks = parseInt(document.getElementById('estimatedWeeks').value) || 0;
+
+            var allocation = devsWillWork / devsInTeam;
+            var loe = devsCanWork * devsInTeam / estimatedWeeks;
+
+            document.getElementById('allocation').value = allocation;
+            document.getElementById('loe').value = loe;
+        }
+    </script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Team Allocation and LOE Calculator</h2>
+        <form>
+            <div class="form-group">
+                <label for="devsInTeam">Developers in Team</label>
+                <input type="number" class="form-control" id="devsInTeam" placeholder="Enter number">
+            </div>
+            <div class="form-group">
+                <label for="devsCanWork">Developers that can work on it</label>
+                <input type="number" class="form-control" id="devsCanWork" placeholder="Enter number">
+            </div>
+            <div class="form-group">
+                <label for="devsWillWork">Developers that will work on it</label>
+                <input type="number" class="form-control" id="devsWillWork" placeholder="Enter number">
+            </div>
+            <div class="form-group">
+                <label for="estimatedWeeks">Estimated number of weeks</label>
+                <input type="number" class="form-control" id="estimatedWeeks" placeholder="Enter number">
+            </div>
+            <div class="form-group">
+                <label for="allocation">Allocation</label>
+                <input type="number" class="form-control" id="allocation" readonly>
+            </div>
+            <div class="form-group">
+                <label for="loe">LOE (Level of Effort)</label>
+                <input type="number" class="form-control" id="loe" readonly>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="calculateValues()">Calculate</button>
+        </form>
+    </div>
+</body>
+</html>
+
