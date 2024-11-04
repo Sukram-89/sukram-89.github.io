@@ -22,7 +22,7 @@ function getURLParams() {
 // Display username and set up role-based display
 function setupUserDisplay() {
     if (username) {
-        document.getElementById('usernameDisplay').innerText = `User: ${username}!`;
+        document.getElementById('usernameDisplay').innerText = `User: ${username}`;
     } else {
         console.warn("No username found in URL");  // Debugging message
     }
