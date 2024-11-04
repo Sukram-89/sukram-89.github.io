@@ -25,7 +25,9 @@ strong {
 	margin-left: auto;
 	background: #F5F5DC; 
 }
-
+.btn{
+	margin-top: 15px;
+}
 h2{
 	text-align: center;
 }

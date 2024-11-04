@@ -11,12 +11,13 @@
 <body>
   <div class="container">
       <div class="exeHeader">
-          <h3>Store</h3>
+          <h3>Information</h3>
           <p id="usernameDisplay"></p>
-          <p>Prices include 25% VAT.</p>
+          <p class="exeTxt">Money: <span id="money" data-testid="money">10000</span> </p>
+          <p id="vatSection">Prices include 25% VAT.</p>
       </div>
 
-      <p class="exeTxt">Money: <span id="money" data-testid="money">10000</span> </p>
+      <h3>Store</h3>
       <p class="exeTxt">Message: <span id="message" data-testid="buy-message"></span></p>
 
       <!-- Product selection -->
@@ -90,8 +91,48 @@
           <p>Total Sum: <span id="totalSum">0</span></p>
           <p id="vatSection">Total VAT: <span id="totalVAT">0</span></p>
           <p>Grand Total: <span id="grandTotal">0</span></p>
+          <button id="button-finalize-purchase" class="btn btn-success" onclick="finalizePurchase()">Buy</button>
       </div>
   </div>
+
+  <!-- Buy Button -->
+
+<!-- Modal for Receipt -->
+<div class="modal fade" id="purchaseModal" tabindex="-1" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="purchaseModalLabel">Finalize Purchase</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Form for Name and Address -->
+        <div id="userDetails">
+          <label for="buyerName">Name:</label>
+          <input type="text" id="buyerName" class="form-control" required>
+          <label for="buyerAddress">Address:</label>
+          <input type="text" id="buyerAddress" class="form-control" required>
+        </div>
+
+        <!-- Receipt Details - Initially Hidden -->
+        <div id="finalReceipt" style="display: none;">
+          <h5>Receipt</h5>
+          <ul id="receiptItems"></ul>
+          <p id="name"></p>
+          <p id="address"></p>
+          <p><strong>Total:</strong> <span id="receiptTotal"></span></p>
+          <p><strong>VAT:</strong> <span id="receiptVAT"></span></p>
+          <p><strong>Grand Total:</strong> <span id="receiptGrandTotal"></span></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" id="confirmPurchaseButton" class="btn btn-primary" onclick="confirmPurchase()">Confirm Purchase</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <script type="text/javascript" src="js/js9_awesome.js"></script>
 </body>

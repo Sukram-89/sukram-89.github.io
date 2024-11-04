@@ -22,7 +22,7 @@ function getURLParams() {
 // Display username and set up role-based display
 function setupUserDisplay() {
     if (username) {
-        document.getElementById('usernameDisplay').innerText = `Welcome, ${username}!`;
+        document.getElementById('usernameDisplay').innerText = `User: ${username}!`;
     } else {
         console.warn("No username found in URL");  // Debugging message
     }
@@ -39,20 +39,34 @@ function setProduct(selectedProduct) {
 
 // Add item to the cart
 function addToCart() {
-    numbOfItem = document.getElementById('buyAmount').value || 1;
+    numbOfItem = parseInt(document.getElementById('buyAmount').value) || 1;
+
     if (checkBuyParam(numbOfItem)) {
         totalPrice = numbOfItem * prodPrices[product];
         const vat = role === 'business' ? 0 : numbOfItem * prodMoms[product];
-        const cartItem = {
-            name: prodNames[product],
-            quantity: numbOfItem,
-            price: totalPrice,
-            vat: vat
-        };
-        
-        cart.push(cartItem);
+        const productName = prodNames[product];
+
+        // Check if the item already exists in the cart
+        const existingItem = cart.find(item => item.name === productName);
+
+        if (existingItem) {
+            // Update the existing item
+            existingItem.quantity += numbOfItem;
+            existingItem.price += totalPrice;
+            existingItem.vat += vat;
+        } else {
+            // Add a new item to the cart
+            const cartItem = {
+                name: productName,
+                quantity: numbOfItem,
+                price: totalPrice,
+                vat: vat
+            };
+            cart.push(cartItem);
+        }
+
         updateCartDisplay();
-        document.getElementById('message').innerHTML = `Added ${numbOfItem} x ${prodNames[product]} to cart.`;
+        document.getElementById('message').innerHTML = `Added ${numbOfItem} x ${productName} to cart.`;
     }
 }
 
@@ -130,6 +144,77 @@ function checkBuyParam(quantity) {
 
     return true;
 }
+
+// Display remaining cash
+function setRemainCash() {
+    document.getElementById('money').innerHTML = cash;
+}
+
+// Function to open the purchase modal
+function finalizePurchase() {
+    // Reset modal fields
+    document.getElementById('buyerName').value = '';
+    document.getElementById('buyerAddress').value = '';
+    document.getElementById('finalReceipt').style.display = 'none';
+    document.getElementById('userDetails').style.display = 'block';
+
+    // Show the modal
+    $('#purchaseModal').modal('show');
+}
+
+// Function to confirm purchase, show receipt, and deduct amount
+function confirmPurchase() {
+    const buyerName = document.getElementById('buyerName').value.trim();
+    const buyerAddress = document.getElementById('buyerAddress').value.trim();
+
+    if (buyerName && buyerAddress) {
+        // Hide input fields and show receipt
+        document.getElementById('userDetails').style.display = 'none';
+        document.getElementById('finalReceipt').style.display = 'block';
+
+        // Populate receipt details
+        const receiptItems = document.getElementById('receiptItems');
+        receiptItems.innerHTML = '';
+        let totalSum = 0;
+        let totalVAT = 0;
+
+        cart.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${item.quantity} x ${item.name} - $${item.price}`;
+            receiptItems.appendChild(listItem);
+
+            totalSum += item.price;
+            totalVAT += item.vat;
+        });
+
+        const grandTotalWithBug = totalSum + totalVAT*0.95;
+        let grandTotal = Math.floor(grandTotalWithBug);
+        document.getElementById('name').textContent = `Thank you for your purchase, ${buyerName}`;
+        document.getElementById('address').textContent = `It will be shipped to: ${buyerAddress}`;
+        document.getElementById('receiptTotal').textContent = `$${totalSum}`;
+        document.getElementById('receiptVAT').textContent = `$${totalVAT}`;
+        document.getElementById('receiptGrandTotal').textContent = `$${grandTotal}`;
+
+        // Deduct from money
+        cash -= grandTotal;
+        setRemainCash();
+
+        // Clear cart and update display
+        cart = [];
+        updateCartDisplay();
+
+        // Change the button to close the modal after confirmation
+        document.getElementById('confirmPurchaseButton').textContent = 'Close';
+        document.getElementById('confirmPurchaseButton').onclick = function() {
+            $('#purchaseModal').modal('hide');
+            document.getElementById('confirmPurchaseButton').textContent = 'Confirm Purchase';
+            document.getElementById('confirmPurchaseButton').onclick = confirmPurchase;
+        };
+    } else {
+        alert("Please enter your Name and Address.");
+    }
+}
+
 
 // Initialize the page
 window.onload = function() {
