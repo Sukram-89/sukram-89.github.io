@@ -1,0 +1,48 @@
+.jumbotron h1 {
+	font-family: "Indie Flower";
+	font-size: 50px;
+    text-align: center;
+}
+
+
+p {
+	font-family: "Times New Roman";
+	font-size: 17px;
+}
+
+.container{
+	background-color: #fff;
+}
+
+strong { 
+    font-weight: normal;
+}
+
+.container1{
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	background: #F5F5DC; 
+}
+
+h2{
+	text-align: center;
+}
+
+h4{
+	text-align: center;
+}
+
+.exeTxt{
+    margin-bottom: 25px;
+}
+.exeHeader{
+    margin-bottom: 25px;
+}
+.exeBtn{
+    margin-bottom: 25px;
+}
+.awesomeSelenium{
+    color: #000;
+}
