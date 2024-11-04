@@ -16,21 +16,25 @@ function getURLParams() {
     const params = new URLSearchParams(window.location.search);
     username = params.get('username');
     role = params.get('role');
+    console.log("Username:", username, "Role:", role);  // For debugging
 }
 
 // Display username and set up role-based display
 function setupUserDisplay() {
     if (username) {
         document.getElementById('usernameDisplay').innerText = `Welcome, ${username}!`;
+    } else {
+        console.warn("No username found in URL");  // Debugging message
     }
     if (role === 'business') {
         document.getElementById('vatSection').style.display = 'none'; // Hide VAT section for business users
     }
 }
 
-// Display remaining cash
-function setRemainCash() {
-    document.getElementById('money').innerHTML = cash;
+// Set the current product
+function setProduct(selectedProduct) {
+    product = parseInt(selectedProduct, 10);
+    console.log("Selected product:", product);  // For debugging
 }
 
 // Add item to the cart
@@ -104,6 +108,7 @@ function removeFromCart(index) {
 
 // Validate the purchase parameters
 function checkBuyParam(quantity) {
+    quantity = parseInt(quantity, 10);
     if (quantity <= 0) {
         document.getElementById('message').innerHTML = quantity < 0 ? 'Enter an amount higher than 0.' : "You can't buy 0 amount";
         return false;
@@ -127,6 +132,8 @@ function checkBuyParam(quantity) {
 }
 
 // Initialize the page
-getURLParams();
-setupUserDisplay();
-setRemainCash();
+window.onload = function() {
+    getURLParams();
+    setupUserDisplay();
+    setRemainCash();
+};
