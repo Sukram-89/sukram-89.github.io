@@ -1,5 +1,6 @@
 {
    "id":3,
    "price":34,
+   "vat": 6.8,
    "name":"Orange"
 }

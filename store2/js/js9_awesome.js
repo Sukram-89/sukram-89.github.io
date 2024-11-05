@@ -1,9 +1,9 @@
 // Initialize variables
 let purchase = 0;
-let cash = 10000;
+let cash = 10000; 6,8
 let product = 0;
 const prodPrices = [0, 15, 23, 34, 4, 999, 4999, 399, 29, 299, 9500];
-const prodMoms = [0, 3.75, 5.75, 8.5, 1, 249, 1249.75, 99.75, 7.24, 49.75, 2375];
+const prodMoms = [0, 3, 4.7, 8.5, 0.8, 199.8, 999.8, 79, 5.8, 59.8, 1900];
 const prodNames = ['', 'Apple', 'Banana', 'Orange', 'Grape', 'Bicycle', 'Samsung S5', 'Toy train', 'Cup of Coffee', 'Chair', 'TV'];
 let numbOfItem;
 let totalPrice;
@@ -101,6 +101,8 @@ function updateCartDisplay() {
         const actionCell = document.createElement('td');
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
+        removeButton.setAttribute('data-testid', `${item.name}-remove-button`);
+        removeButton.setAttribute('class', `btn btn-secondary`);
         removeButton.onclick = () => removeFromCart(index);
         actionCell.appendChild(removeButton);
         row.appendChild(actionCell);

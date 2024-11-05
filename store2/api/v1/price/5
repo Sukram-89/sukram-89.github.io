@@ -1,5 +1,6 @@
 {
    "id":5,
    "price":899,
+   "vat": 179.8,
    "name":"Bicycle"
 }

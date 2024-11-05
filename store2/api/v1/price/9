@@ -1,5 +1,6 @@
 {
    "id":9,
    "price":199,
+   "vat": 39.8,
    "name":"Chair"
 }

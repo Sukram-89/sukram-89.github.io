@@ -14,7 +14,7 @@
   <div class="container">
     <div class="user-info-box">
       <i class="bi bi-person-circle"></i> <!-- Bootstrap icon for user -->
-      <p id="usernameDisplay">Username</p>
+      <p id="usernameDisplay" data-testid="username">Username</p>
       <p>Money: <span id="money" data-testid="money">10000</span></p>
       <button class="btn btn-danger btn-sm mt-2" onclick="logout()">Log Out</button>
     </div>
@@ -42,7 +42,7 @@
           <label for="buyAmount">Amount</label>
           <input id="buyAmount" type="text" class="form-control">
       </div>
-      <button id="button-buy-product" class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
+      <button data-testid="add-to-cart-button" id="button-buy-product" class="btn btn-primary btn-buy" onclick="addToCart()">Add to Cart</button>
 
       <hr><br>
 
@@ -129,7 +129,6 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
         <button type="button" id="confirmPurchaseButton" class="btn btn-primary" onclick="confirmPurchase()">Confirm Purchase</button>
       </div>
     </div>

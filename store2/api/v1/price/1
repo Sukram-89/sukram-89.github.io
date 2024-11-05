@@ -1,5 +1,6 @@
 {
    "id":1,
    "price":15,
+   "vat":3,
    "name":"Apple"
 }
