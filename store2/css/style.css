@@ -28,8 +28,10 @@ strong {
 .btn{
 	margin-top: 15px;
 }
-h2{
+h1{
 	text-align: center;
+	margin-bottom:55px;
+	padding-top:25px;
 }
 
 h4{
@@ -48,3 +50,28 @@ h4{
 .awesomeSelenium{
     color: #000;
 }
+
+.user-info-box {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 200px;
+	padding: 15px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	background-color: #f9f9f9;
+	text-align: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .user-info-box i {
+	font-size: 24px;
+	color: #4CAF50;
+	margin-bottom: 8px;
+  }
+
+  .user-info-box p {
+	margin: 0;
+	font-weight: bold;
+	font-size: 14px;
+  }

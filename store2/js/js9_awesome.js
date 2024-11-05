@@ -24,6 +24,7 @@ function setupUserDisplay() {
     if (username) {
         document.getElementById('usernameDisplay').innerText = `User: ${username}`;
     } else {
+        document.getElementById('usernameDisplay').innerText = `Something went wrong, please login again`;
         console.warn("No username found in URL");  // Debugging message
     }
     if (role === 'business') {
@@ -36,13 +37,14 @@ function setProduct(selectedProduct) {
     product = parseInt(selectedProduct, 10);
     console.log("Selected product:", product);  // For debugging
 }
-
 // Add item to the cart
 function addToCart() {
     numbOfItem = parseInt(document.getElementById('buyAmount').value) || 1;
 
     if (checkBuyParam(numbOfItem)) {
-        totalPrice = numbOfItem * prodPrices[product];
+        // Calculate total price, excluding VAT for business users
+        const productPrice = role === 'business' ? prodPrices[product] / 1.25 : prodPrices[product];
+        totalPrice = numbOfItem * productPrice;
         const vat = role === 'business' ? 0 : numbOfItem * prodMoms[product];
         const productName = prodNames[product];
 
@@ -69,7 +71,6 @@ function addToCart() {
         document.getElementById('message').innerHTML = `Added ${numbOfItem} x ${productName} to cart.`;
     }
 }
-
 // Update the cart display
 function updateCartDisplay() {
     const cartTable = document.getElementById('cartItems');
@@ -110,7 +111,7 @@ function updateCartDisplay() {
     // Display total values
     document.getElementById('totalSum').textContent = totalSum;
     document.getElementById('totalVAT').textContent = totalVAT;
-    document.getElementById('grandTotal').textContent = totalSum + totalVAT;
+    document.getElementById('grandTotal').textContent = totalSum;
 }
 
 // Remove an item from the cart
@@ -215,6 +216,9 @@ function confirmPurchase() {
     }
 }
 
+function logout() {
+    window.location.href = 'https://hoff.is/login';
+  }
 
 // Initialize the page
 window.onload = function() {
