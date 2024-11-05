@@ -31,7 +31,7 @@ function setupUserDisplay() {
     // If the user is a business user, hide VAT section and adjust prices in the price table
     if (role === 'business') {
         document.getElementById('vatSection').style.display = 'none'; // Hide VAT section for business users
-
+        document.getElementById('vat-message').innerText = 'Prices shown are without VAT.'; // Hide VAT section for business users
         // Update price table to show prices without VAT
         const productList = document.getElementById('productList').children;
         for (let i = 0; i < prodPrices.length - 1; i++) {
