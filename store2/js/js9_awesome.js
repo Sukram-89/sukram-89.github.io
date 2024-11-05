@@ -27,8 +27,17 @@ function setupUserDisplay() {
         document.getElementById('usernameDisplay').innerText = `Something went wrong, please login again`;
         console.warn("No username found in URL");  // Debugging message
     }
+
+    // If the user is a business user, hide VAT section and adjust prices in the price table
     if (role === 'business') {
         document.getElementById('vatSection').style.display = 'none'; // Hide VAT section for business users
+
+        // Update price table to show prices without VAT
+        const productList = document.getElementById('productList').children;
+        for (let i = 0; i < prodPrices.length - 1; i++) {
+            const priceCell = productList[i].children[1];
+            priceCell.textContent = (prodPrices[i + 1] / 1.25).toFixed(2); // Adjust for business users
+        }
     }
 }
 
@@ -71,7 +80,6 @@ function addToCart() {
         document.getElementById('message').innerHTML = `Added ${numbOfItem} x ${productName} to cart.`;
     }
 }
-// Update the cart display
 function updateCartDisplay() {
     const cartTable = document.getElementById('cartItems');
     cartTable.innerHTML = ''; // Clear existing cart items
@@ -81,19 +89,22 @@ function updateCartDisplay() {
 
     cart.forEach((item, index) => {
         totalSum += item.price;
-        totalVAT += item.vat;
+        if (role !== 'business') totalVAT += item.vat;
 
         const row = document.createElement('tr');
 
         const nameCell = document.createElement('td');
+        nameCell.setAttribute('data-testid', `${item.name}-receipt-name`);
         nameCell.textContent = item.name;
         row.appendChild(nameCell);
 
         const quantityCell = document.createElement('td');
+        quantityCell.setAttribute('data-testid', `${item.name}-receipt-quantity`);
         quantityCell.textContent = item.quantity;
         row.appendChild(quantityCell);
 
         const priceCell = document.createElement('td');
+        priceCell.setAttribute('data-testid', `${item.name}-receipt-price`);
         priceCell.textContent = item.price;
         row.appendChild(priceCell);
 
@@ -112,6 +123,7 @@ function updateCartDisplay() {
 
     // Display total values
     document.getElementById('totalSum').textContent = totalSum;
+    document.getElementById('totalVAT').style.display = role === 'business' ? 'none' : 'block';
     document.getElementById('totalVAT').textContent = totalVAT;
     document.getElementById('grandTotal').textContent = totalSum;
 }
