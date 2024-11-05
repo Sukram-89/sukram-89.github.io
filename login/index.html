@@ -9,6 +9,7 @@
     .login-container { border: 1px solid #ddd; padding: 20px; border-radius: 5px; width: 300px; }
     .login-container h2 { text-align: center; }
     .form-group { margin-bottom: 15px; }
+    .input-field {width:93%;}
     label { display: block; margin-bottom: 5px; }
     input, select, button { width: 100%; padding: 8px; }
     button { background-color: #4CAF50; color: white; border: none; cursor: pointer; }
@@ -20,15 +21,15 @@
   <div class="login-container">
     <h2>Login</h2>
     <div class="form-group">
-      <label for="username">Username:</label>
-      <input type="text" id="username" required>
+      <label for="username">Username</label>
+      <input class="input-field" type="text" id="username" required>
     </div>
     <div class="form-group">
-      <label for="password">Password:</label>
-      <input type="password" id="password" required>
+      <label for="password">Password</label>
+      <input class="input-field" type="password" id="password" required>
     </div>
     <div class="form-group">
-      <label for="role">Select Role:</label>
+      <label for="role">Select Role</label>
       <select id="role">
         <option value="business">Business</option>
         <option value="consumer">Consumer</option>
