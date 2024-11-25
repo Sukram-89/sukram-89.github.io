@@ -1,0 +1,140 @@
+<head>
+  <title>The Hoff Store</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"> <!-- Bootstrap Icons -->
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="user-info-box">
+      <i class="bi bi-person-circle"></i> <!-- Bootstrap icon for user -->
+      <p id="usernameDisplay" data-testid="username">Username</p>
+      <p>Money: <span id="money" data-testid="money">10000</span></p>
+      <button class="btn btn-danger btn-sm mt-2" onclick="logout()">Log Out</button>
+    </div>
+
+      <h1 class="header">Store</h1>
+      <p class="exeTxt">Message: <span id="message" data-testid="buy-message"></span></p>
+
+      <!-- Product selection -->
+      <select id="select-product" data-testid="select-product" class="form-control" onchange="setProduct(this.value)">
+          <option value="0">Select</option>
+          <option value="1">Apple</option>
+          <option value="2">Banana</option>
+          <option value="3">Orange</option>
+          <option value="4">Grape</option>
+          <option value="5">Bicycle</option>
+          <option value="6">Samsung S5</option>
+          <option value="7">Toy train</option>
+          <option value="8">Cup of Coffee</option>
+          <option value="9">Chair</option>
+          <option value="10">TV</option>
+      </select>
+
+      <br>
+      <div id="buyForm" class="form-inline">
+          <label for="buyAmount">Amount</label>
+          <input id="buyAmount" type="text" class="form-control">
+      </div>
+      <button data-testid="add-to-cart-button" id="button-buy-product" class="btn btn-primary btn-buy" onclick="addToCart()">Add to Cart</button>
+
+      <hr><br>
+
+      <!-- Product Price Table -->
+      <h3>Price Table</h3>
+      <p id="vat-message">Prices shown is with VAT.</p>
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th>Product</th>
+                  <th>Price each</th>
+              </tr>
+          </thead>
+          <tbody id="productList">
+              <!-- List of products -->
+              <tr><td>Apple</td><td>15</td></tr>
+              <tr><td>Banana</td><td>23</td></tr>
+              <tr><td>Orange</td><td>34</td></tr>
+              <tr><td>Grape</td><td>4</td></tr>
+              <tr><td>Bicycle</td><td>999</td></tr>
+              <tr><td>Samsung S5</td><td>4999</td></tr>
+              <tr><td>Toy train</td><td>399</td></tr>
+              <tr><td>Cup of Coffee</td><td>29</td></tr>
+              <tr><td>Chair</td><td>299</td></tr>
+              <tr><td>TV</td><td>9500</td></tr>
+          </tbody>
+      </table>
+
+      <hr><br>
+
+      <!-- Cart Table -->
+      <h3>Cart</h3>
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th>Product</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+                  <th>Action</th>
+              </tr>
+          </thead>
+          <tbody id="cartItems">
+              <!-- Cart items will be dynamically added here -->
+          </tbody>
+      </table>
+
+      <!-- Totals Section -->
+      <div id="totals">
+          <p>Total Sum: <span id="totalSum">0</span></p>
+          <p id="vatSection" style="display: flex; gap: 5px;">Total VAT: <span id="totalVAT">0</span></p>
+          <p>Grand Total: <span id="grandTotal">0</span></p>
+          <button id="button-finalize-purchase" class="btn btn-success" onclick="finalizePurchase()">Buy</button>
+      </div>
+  </div>
+
+  <!-- Buy Button -->
+
+<!-- Modal for Receipt -->
+<div class="modal fade" id="purchaseModal" tabindex="-1" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="purchaseModalLabel">Finalize Purchase</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Form for Name and Address -->
+        <div id="userDetails">
+          <label for="buyerName">Name:</label>
+          <input type="text" id="buyerName" class="form-control" required>
+          <label for="buyerAddress">Address:</label>
+          <input type="text" id="buyerAddress" class="form-control" required>
+        </div>
+
+        <!-- Receipt Details - Initially Hidden -->
+        <div id="finalReceipt" style="display: none;">
+          <h5>Receipt</h5>
+          <ul id="receiptItems"></ul>
+          <p id="name"></p>
+          <p id="address"></p>
+          <p><strong>Total:</strong> <span id="receiptTotal"></span></p>
+          <p><strong>VAT:</strong> <span id="receiptVAT"></span></p>
+          <p><strong>Grand Total:</strong> <span id="receiptGrandTotal"></span></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="confirmPurchaseButton" class="btn btn-primary" onclick="confirmPurchase()">Confirm Purchase</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script type="text/javascript" src="js/js9_awesome.js"></script>
+</body>
