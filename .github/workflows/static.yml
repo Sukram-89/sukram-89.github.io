@@ -44,7 +44,7 @@ jobs:
           path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v2
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
