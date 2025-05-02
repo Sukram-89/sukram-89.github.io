@@ -293,6 +293,56 @@
         "Sfinx",
         "Leprechaun"
       ]
+    },
+    {
+      "theme": "Möbler",
+      "words": [
+        "Soffa",
+        "Stol",
+        "Bord",
+        "Säng",
+        "Bokhylla",
+        "Garderob",
+        "Fåtölj",
+        "Byrå",
+        "Skänk",
+        "Pall",
+        "Matbord",
+        "Skrivbord",
+        "TV-bänk",
+        "Hyllplan",
+        "Nattduksbord",
+        "Köksstol",
+        "Barstol",
+        "Soffbord",
+        "Vitrinskåp",
+        "Skohylla"
+      ]
+    },
+    {
+      "theme": "Möbler",
+      "words": [
+        "Soffa",
+        "Stol",
+        "Bord",
+        "Säng",
+        "Bokhylla",
+        "Garderob",
+        "Fåtölj",
+        "Byrå",
+        "Skänk",
+        "Pall",
+        "Matbord",
+        "Skrivbord",
+        "TV-bänk",
+        "Hyllplan",
+        "Nattduksbord",
+        "Köksstol",
+        "Barstol",
+        "Soffbord",
+        "Vitrinskåp",
+        "Skohylla"
+      ]
     }
   ]
 }

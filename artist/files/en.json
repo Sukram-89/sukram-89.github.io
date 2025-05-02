@@ -292,6 +292,56 @@
         "Tape Measure", "Chisel", "Sander", "Socket Wrench", "Utility Knife",
         "Crowbar", "Ladder", "Clamp", "Trowel", "Handsaw", "Axe", "Shovel", "Rake"
       ]
+    },
+    {
+      "theme": "Office Supplies",
+      "words": [
+        "Pen",
+        "Eraser",
+        "Ruler",
+        "Stapler",
+        "Hole Puncher",
+        "Paper",
+        "Notebook",
+        "Binder",
+        "Scissors",
+        "Tape",
+        "Whiteboard",
+        "Marker Pen",
+        "Computer",
+        "Printer",
+        "Calculator",
+        "Letter Opener",
+        "Trash Can",
+        "Pencil Sharpener",
+        "Post-it Notes",
+        "Envelope"
+      ]
+    },
+    {
+      "theme": "Vehicles",
+      "words": [
+        "Car",
+        "Truck",
+        "Motorcycle",
+        "Bicycle",
+        "Bus",
+        "Train",
+        "Airplane",
+        "Helicopter",
+        "Boat",
+        "Ship",
+        "Moped",
+        "Tractor",
+        "Scooter",
+        "Ambulance",
+        "Fire Truck",
+        "Taxi",
+        "Sailboat",
+        "Submarine",
+        "Roller Skates",
+        "Spaceship"
+      ]
     }
   ]
 }
