@@ -104,7 +104,7 @@ function getFakeArtistIndex(num) {
  * based on current state (currentPlayer, isWordVisible, etc.).
  */
 function renderGameArea() {
-    const gameDiv = document.getElementById("gameArea").querySelector(".col-md-8");
+    const gameDiv = document.getElementById("gameArea").querySelector(".col-12");
 
     // If all players have finished
     if (currentPlayer >= numPlayers) {
