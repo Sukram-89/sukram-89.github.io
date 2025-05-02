@@ -1,0 +1,297 @@
+{
+  "en": [
+    {
+      "theme": "Occupations",
+      "words": [
+        "Doctor", "Nurse", "Teacher", "Engineer", "Lawyer", "Police Officer", "Firefighter", "Chef", "Pilot", "Plumber",
+        "Electrician", "Accountant", "Pharmacist", "Architect", "Journalist", "Librarian", "Veterinarian", "Dentist", "Graphic Designer", "Carpenter",
+        "Scientist", "Actor", "Musician", "Athlete", "Photographer", "Writer", "Mechanic", "Farmer", "Software Developer", "Translator"
+      ]
+    },
+    {
+      "theme": "Hobbies",
+      "words": [
+        "Painting", "Drawing", "Knitting", "Gardening", "Hiking", "Photography", "Woodworking", "Biking", "Fishing", "Baking",
+        "Cooking", "Reading", "Writing", "Playing Guitar", "Dancing", "Birdwatching", "Yoga", "Running", "Scrapbooking", "Pottery",
+        "Sewing", "Origami", "Calligraphy", "Gaming", "Cooking Classes", "Rock Climbing", "Surfing", "Singing", "Meditation", "Archery"
+      ]
+    },
+    {
+      "theme": "Drinks",
+      "words": [
+        "Water",
+        "Coffee",
+        "Tea",
+        "Cola",
+        "Lemonade",
+        "Orange Juice",
+        "Apple Juice",
+        "Smoothie",
+        "Milk",
+        "Hot Chocolate",
+        "Energy Drink",
+        "Beer",
+        "Wine",
+        "Whiskey",
+        "Gin",
+        "Tonic Water",
+        "Cider",
+        "Coconut Water",
+        "Milkshake",
+        "Iced Tea"
+      ]
+    },
+    {
+      "theme": "Tech Gadgets",
+      "words": [
+        "Smartphone",
+        "Laptop",
+        "Tablet",
+        "Smartwatch",
+        "E-Reader",
+        "Wireless Earbuds",
+        "Gaming Console",
+        "Action Camera",
+        "Drone",
+        "Bluetooth Speaker",
+        "Fitness Tracker",
+        "Smart Home Hub",
+        "Wireless Keyboard",
+        "VR Headset",
+        "External Hard Drive",
+        "3D Printer",
+        "Smart Doorbell",
+        "Streaming Stick",
+        "Robot Vacuum",
+        "Webcam"
+      ]
+    },
+    {
+      "theme": "Musical Genres",
+      "words": [
+        "Rock",
+        "Pop",
+        "Jazz",
+        "Blues",
+        "Classical",
+        "Hip-Hop",
+        "R&B",
+        "Country",
+        "Electronic",
+        "Techno",
+        "House",
+        "Disco",
+        "Reggae",
+        "Funk",
+        "Soul",
+        "Metal",
+        "Punk",
+        "Folk",
+        "Latin",
+        "Gospel"
+      ]
+    },
+    {
+      "theme": "Landmarks",
+      "words": [
+        "Eiffel Tower",
+        "Statue of Liberty",
+        "Great Wall of China",
+        "Taj Mahal",
+        "Big Ben",
+        "Sydney Opera House",
+        "Colosseum",
+        "Machu Picchu",
+        "Christ the Redeemer",
+        "Angkor Wat",
+        "Acropolis",
+        "Stonehenge",
+        "Mount Rushmore",
+        "Golden Gate Bridge",
+        "Empire State Building",
+        "Burj Khalifa",
+        "Leaning Tower of Pisa",
+        "Notre Dame",
+        "Sagrada Familia",
+        "Tower Bridge"
+      ]
+    },
+    {
+      "theme": "Car Brands",
+      "words": [
+        "Toyota",
+        "Ford",
+        "Chevrolet",
+        "Honda",
+        "BMW",
+        "Mercedes-Benz",
+        "Audi",
+        "Volkswagen",
+        "Porsche",
+        "Lexus",
+        "Nissan",
+        "Hyundai",
+        "Kia",
+        "Ferrari",
+        "Lamborghini",
+        "Tesla",
+        "Volvo",
+        "Subaru",
+        "Jeep",
+        "Dodge"
+      ]
+    },
+    {
+      "theme": "Board Games",
+      "words": [
+        "Monopoly",
+        "Scrabble",
+        "Chess",
+        "Checkers",
+        "Clue",
+        "Risk",
+        "Settlers of Catan",
+        "Ticket to Ride",
+        "Pandemic",
+        "Carcassonne",
+        "Battleship",
+        "Connect Four",
+        "Operation",
+        "Guess Who?",
+        "Twister",
+        "Trivial Pursuit",
+        "Pictionary",
+        "Jenga",
+        "The Game of Life",
+        "Uno"
+      ]
+    },
+    {
+      "theme": "Desserts",
+      "words": [
+        "Ice Cream",
+        "Chocolate Cake",
+        "Apple Pie",
+        "Brownies",
+        "Cheesecake",
+        "Tiramisu",
+        "Gelato",
+        "Cupcakes",
+        "Doughnuts",
+        "Pudding",
+        "Crème Brûlée",
+        "Éclair",
+        "Waffle",
+        "Pancake",
+        "Fruit Salad",
+        "Cinnamon Roll",
+        "Macarons",
+        "Baklava",
+        "Banoffee Pie",
+        "Key Lime Pie"
+      ]
+    },
+    {
+      "theme": "Mythical Creatures",
+      "words": [
+        "Dragon",
+        "Unicorn",
+        "Phoenix",
+        "Mermaid",
+        "Griffin",
+        "Centaur",
+        "Pegasus",
+        "Minotaur",
+        "Hydra",
+        "Fairy",
+        "Werewolf",
+        "Vampire",
+        "Elf",
+        "Troll",
+        "Giant",
+        "Basilisk",
+        "Chimera",
+        "Kraken",
+        "Sphinx",
+        "Leprechaun"
+      ]
+    },
+    {
+      "theme": "Animals",
+      "words": [
+        "Lion", "Elephant", "Tiger", "Giraffe", "Zebra", "Hippo", "Rhino", "Monkey",
+        "Kangaroo", "Panda", "Wolf", "Fox", "Bear", "Leopard", "Cheetah", "Koala",
+        "Camel", "Alligator", "Crocodile", "Eagle",
+        "Ostrich", "Penguin", "Dolphin", "Shark", "Whale", "Octopus", "Frog", "Snake", "Parrot", "Peacock"
+      ]
+    },
+    {
+      "theme": "Fruits",
+      "words": [
+        "Apple", "Banana", "Orange", "Mango", "Strawberry", "Blueberry", "Pineapple",
+        "Watermelon", "Grape", "Pear", "Peach", "Plum", "Kiwi", "Lemon", "Lime",
+        "Cherry", "Papaya", "Coconut", "Avocado", "Raspberry",
+        "Blackberry", "Pomegranate", "Fig", "Guava", "Lychee", "Passionfruit", "Dragonfruit", "Cranberry", "Tangerine", "Cantaloupe"
+      ]
+    },
+    {
+      "theme": "Vegetables",
+      "words": [
+        "Carrot", "Potato", "Tomato", "Onion", "Garlic", "Broccoli", "Cauliflower",
+        "Spinach", "Lettuce", "Cabbage", "Cucumber", "Pepper", "Eggplant", "Zucchini",
+        "Mushroom", "Celery", "Corn", "Green Bean", "Asparagus", "Pea", "Artichoke", "Beetroot", "Radish", "Turnip", "Leek", "Chard", "Kale", "Okra", "Parsnip", "Brussels Sprout"
+      ]
+    },
+    {
+      "theme": "Countries",
+      "words": [
+        "Sweden", "Norway", "Denmark", "Finland", "Germany", "France", "Spain",
+        "Italy", "Greece", "United Kingdom", "USA", "Canada", "Mexico", "Brazil",
+        "Argentina", "Australia", "Japan", "China", "India", "South Africa", "Portugal", "Netherlands", "Switzerland", "Austria", "Belgium", "Poland", "Czech Republic", "Hungary", "South Korea", "New Zealand"
+      ]
+    },
+    {
+      "theme": "Sports",
+      "words": [
+        "Soccer", "Basketball", "Baseball", "Tennis", "Cricket", "Rugby", "Golf",
+        "Hockey", "Volleyball", "Badminton", "Table Tennis", "Boxing", "MMA",
+        "Skiing", "Snowboarding", "Swimming", "Cycling", "Running", "Gymnastics",
+        "Wrestling", "Archery", "Fencing", "Rowing", "Darts", "Snooker", "Bowling", "Skateboarding", "Handball", "Water Polo", "Triathlon"
+      ]
+    },
+    {
+      "theme": "Musical Instruments",
+      "words": [
+        "Guitar", "Piano", "Violin", "Drums", "Flute", "Trumpet", "Saxophone",
+        "Clarinet", "Cello", "Harp", "Oboe", "Trombone", "Bassoon", "Tuba",
+        "Synthesizer", "Electric Guitar", "Banjo", "Ukulele", "Harmonica",
+        "Accordion"
+      ]
+    },
+    {
+      "theme": "Movies",
+      "words": [
+        "The Godfather", "Titanic", "Inception", "Pulp Fiction", "Forrest Gump",
+        "Avatar", "The Dark Knight", "Star Wars", "Jurassic Park", "E.T.",
+        "Fight Club", "The Matrix", "Gladiator", "Back to the Future", "Jaws",
+        "Shrek", "Toy Story", "The Lion King", "Frozen", "Casablanca"
+      ]
+    },
+    {
+      "theme": "Foods",
+      "words": [
+        "Pizza", "Hamburger", "Pasta", "Sushi", "Taco", "Burrito", "Curry", "Ramen",
+        "Steak", "Fried Chicken", "Salad", "Sandwich", "Soup", "Dumplings", "Paella",
+        "Fish and Chips", "Falafel", "Hummus", "Goulash", "Lasagna"
+      ]
+    },
+    {
+      "theme": "Tools",
+      "words": [
+        "Hammer", "Screwdriver", "Wrench", "Pliers", "Saw", "Drill", "Level",
+        "Tape Measure", "Chisel", "Sander", "Socket Wrench", "Utility Knife",
+        "Crowbar", "Ladder", "Clamp", "Trowel", "Handsaw", "Axe", "Shovel", "Rake"
+      ]
+    }
+  ]
+}
