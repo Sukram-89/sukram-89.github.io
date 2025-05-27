@@ -25,6 +25,7 @@ function setupUserDisplay() {
         document.getElementById('usernameDisplay').innerText = `User: ${username}`;
     } else {
         document.getElementById('usernameDisplay').innerText = `Test user`;
+        document.getElementById('logout-button').style.display = 'none';
         console.warn("No username found in URL");  // Debugging message
     }
 
