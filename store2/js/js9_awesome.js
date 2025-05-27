@@ -24,7 +24,7 @@ function setupUserDisplay() {
     if (username) {
         document.getElementById('usernameDisplay').innerText = `User: ${username}`;
     } else {
-        document.getElementById('usernameDisplay').innerText = `Something went wrong, please login again`;
+        document.getElementById('usernameDisplay').innerText = `Test user`;
         console.warn("No username found in URL");  // Debugging message
     }
 
