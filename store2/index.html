@@ -20,31 +20,61 @@
     </div>
 
       <h1 class="header">Store</h1>
-      <p class="exeTxt">Message: <span id="message" data-testid="buy-message"></span></p>
 
-      <!-- Product selection -->
-      <select id="select-product" data-testid="select-product" class="form-control" onchange="setProduct(this.value)">
-          <option value="0">Select</option>
-          <option value="1">Apple</option>
-          <option value="2">Banana</option>
-          <option value="3">Orange</option>
-          <option value="4">Grape</option>
-          <option value="5">Bicycle</option>
-          <option value="6">Samsung S5</option>
-          <option value="7">Toy train</option>
-          <option value="8">Cup of Coffee</option>
-          <option value="9">Chair</option>
-          <option value="10">TV</option>
-      </select>
 
-      <br>
-      <div id="buyForm" class="form-inline">
-          <label for="buyAmount">Amount</label>
-          <input id="buyAmount" type="text" class="form-control">
+      <div class="row">
+        <div class="col-md-6">
+  
+          <p class="exeTxt">Message: <span id="message" data-testid="buy-message"></span></p>
+    
+          <!-- Product selection -->
+          <select id="select-product" data-testid="select-product" class="form-control" onchange="setProduct(this.value)">
+              <option value="0">Select</option>
+              <option value="1">Apple</option>
+              <option value="2">Banana</option>
+              <option value="3">Orange</option>
+              <option value="4">Grape</option>
+              <option value="5">Bicycle</option>
+              <option value="6">Samsung S5</option>
+              <option value="7">Toy train</option>
+              <option value="8">Cup of Coffee</option>
+              <option value="9">Chair</option>
+              <option value="10">TV</option>
+          </select>
+    
+          <br>
+          <div id="buyForm" class="form-inline">
+              <label for="buyAmount">Amount</label>
+              <input id="buyAmount" type="text" class="form-control">
+          </div>
+          <button data-testid="add-to-cart-button" id="button-buy-product" class="btn btn-primary btn-buy" onclick="addToCart()">Add to Cart</button>
+    
+          <hr><br>
+        </div>
+        <div class="col-md-6">
+              <!-- Cart Table -->
+        <h3>Cart</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems">
+                <!-- Cart items will be dynamically added here -->
+            </tbody>
+        </table>
       </div>
-      <button data-testid="add-to-cart-button" id="button-buy-product" class="btn btn-primary btn-buy" onclick="addToCart()">Add to Cart</button>
-
-      <hr><br>
+      <!-- Totals Section -->
+      <div id="totals">
+          <p>Total Sum: <span id="totalSum">0</span></p>
+          <p id="vatSection" style="display: flex; gap: 5px;">Total VAT: <span id="totalVAT">0</span></p>
+          <p>Grand Total: <span id="grandTotal">0</span></p>
+          <button id="button-finalize-purchase" class="btn btn-success" onclick="finalizePurchase()">Buy</button>
+      </div>
 
       <!-- Product Price Table -->
       <h3>Price Table</h3>
@@ -73,29 +103,7 @@
 
       <hr><br>
 
-      <!-- Cart Table -->
-      <h3>Cart</h3>
-      <table class="table table-striped">
-          <thead>
-              <tr>
-                  <th>Product</th>
-                  <th>Quantity</th>
-                  <th>Price</th>
-                  <th>Action</th>
-              </tr>
-          </thead>
-          <tbody id="cartItems">
-              <!-- Cart items will be dynamically added here -->
-          </tbody>
-      </table>
 
-      <!-- Totals Section -->
-      <div id="totals">
-          <p>Total Sum: <span id="totalSum">0</span></p>
-          <p id="vatSection" style="display: flex; gap: 5px;">Total VAT: <span id="totalVAT">0</span></p>
-          <p>Grand Total: <span id="grandTotal">0</span></p>
-          <button id="button-finalize-purchase" class="btn btn-success" onclick="finalizePurchase()">Buy</button>
-      </div>
   </div>
 
   <!-- Buy Button -->
