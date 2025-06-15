@@ -242,8 +242,13 @@ function confirmPurchase() {
 }
 
 function logout() {
-    window.location.href = 'https://hoff.is/login';
-  }
+    // Delete cookies by setting their values to empty and expiring them
+    document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "role=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    
+    // Redirect to the logout page
+    window.location.href = 'https://hoff.is/cookies';
+}
 
 // Initialize the page
 window.onload = function() {
