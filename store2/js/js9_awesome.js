@@ -220,9 +220,9 @@ function confirmPurchase() {
         //let grandTotal = Math.floor(grandTotalWithBug);
         document.getElementById('name').textContent = `Thank you for your purchase, ${buyerName}`;
         document.getElementById('address').textContent = `It will be shipped to: ${buyerAddress}`;
-        document.getElementById('receiptTotal').textContent = `$${totalSum}`;
-        document.getElementById('receiptVAT').textContent = `$${totalVAT}`;
-        document.getElementById('receiptGrandTotal').textContent = `$${grandTotal}`;
+        document.getElementById('receiptTotal').textContent = `${totalSum}`;
+        document.getElementById('receiptVAT').textContent = `${totalVAT}`;
+        document.getElementById('receiptGrandTotal').textContent = `${grandTotal}`;
 
         // Deduct from money
         cash -= grandTotal;
