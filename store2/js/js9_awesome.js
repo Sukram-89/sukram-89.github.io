@@ -247,7 +247,7 @@ function logout() {
     document.cookie = "role=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     
     // Redirect to the logout page
-    window.location.href = 'https://hoff.is/cookies';
+    window.location.href = 'https://hoff.is/login';
 }
 
 // Initialize the page
