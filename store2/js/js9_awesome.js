@@ -213,8 +213,8 @@ function confirmPurchase() {
             totalVAT += item.vat;
         });
 
-        const grandTotalWithBug = totalSum + totalVAT*0.95;
-        let grandTotal = Math.floor(grandTotalWithBug);
+        //const grandTotalWithBug = totalSum + totalVAT*0.95;
+        //let grandTotal = Math.floor(grandTotalWithBug);
         document.getElementById('name').textContent = `Thank you for your purchase, ${buyerName}`;
         document.getElementById('address').textContent = `It will be shipped to: ${buyerAddress}`;
         document.getElementById('receiptTotal').textContent = `$${totalSum}`;
