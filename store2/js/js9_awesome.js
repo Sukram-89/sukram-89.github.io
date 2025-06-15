@@ -102,20 +102,23 @@ function updateCartDisplay() {
         totalSum += item.price;
         if (role !== 'business') totalVAT += item.vat;
 
+        // Replace spaces with underscores for testid
+        const safeName = item.name.replace(/\s+/g, '_');
+
         const row = document.createElement('tr');
 
         const nameCell = document.createElement('td');
-        nameCell.setAttribute('data-testid', `${item.name}-receipt-name`);
+        nameCell.setAttribute('data-testid', `${safeName}-receipt-name`);
         nameCell.textContent = item.name;
         row.appendChild(nameCell);
 
         const quantityCell = document.createElement('td');
-        quantityCell.setAttribute('data-testid', `${item.name}-receipt-quantity`);
+        quantityCell.setAttribute('data-testid', `${safeName}-receipt-quantity`);
         quantityCell.textContent = item.quantity;
         row.appendChild(quantityCell);
 
         const priceCell = document.createElement('td');
-        priceCell.setAttribute('data-testid', `${item.name}-receipt-price`);
+        priceCell.setAttribute('data-testid', `${safeName}-receipt-price`);
         priceCell.textContent = item.price;
         row.appendChild(priceCell);
 
@@ -123,7 +126,7 @@ function updateCartDisplay() {
         const actionCell = document.createElement('td');
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
-        removeButton.setAttribute('data-testid', `${item.name}-remove-button`);
+        removeButton.setAttribute('data-testid', `${safeName}-remove-button`);
         removeButton.setAttribute('class', `btn btn-secondary`);
         removeButton.onclick = () => removeFromCart(index);
         actionCell.appendChild(removeButton);
