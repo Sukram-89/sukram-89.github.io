@@ -12,10 +12,20 @@ let username;
 let cart = [];
 
 // Parse URL parameters
-function getURLParams() {
-    const params = new URLSearchParams(window.location.search);
-    username = params.get('username');
-    role = params.get('role');
+// Retrieve values from cookies
+function getCookieParams() {
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) {
+            return decodeURIComponent(parts.pop().split(';').shift());
+        }
+        return null;
+    }
+
+    username = getCookie('username');
+    role = getCookie('role');
+
     console.log("Username:", username, "Role:", role);  // For debugging
 }
 
@@ -237,7 +247,7 @@ function logout() {
 
 // Initialize the page
 window.onload = function() {
-    getURLParams();
+    getCookieParams();
     setupUserDisplay();
     setRemainCash();
 };
